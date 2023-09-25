@@ -1,0 +1,33 @@
+﻿
+@model IEnumerable<University.Web.Models.ViewModels.CourseViewModel>
+<h1>Course Lists</h1>
+
+<partial name="_Notification" />
+<a type="button" class="btn btn-primary" asp-controller="Course" asp-action="Create">Create A New Course</a>
+
+
+<div class="table">
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">CourseName</th>
+      <th scope="col">CourseDescription</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+            @foreach(var obj in Model)
+            {
+            <tr>
+                <th scope="row" hidden>@obj.Id</th>
+                <td>@obj.CourseName</td>
+                <td>@obj.CourseDescription</td>
+                    <td><a class="link-primary" asp-controller="Course" asp-action="Edit" asp-route-id="@obj.Id">Edit</a></td>
+                    <td><a class="link-secondary" asp-controller="Course" asp-action="Delete" asp-route-id="@obj.Id">Delete</a></td>
+   
+            </tr>
+            } 
+    
+  </tbody>
+</table>
+</div>

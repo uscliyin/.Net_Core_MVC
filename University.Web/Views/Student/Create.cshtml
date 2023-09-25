@@ -1,0 +1,40 @@
+﻿@page
+@model University.Web.Models.ViewModels.CourseViewModel
+
+<form method="post">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">FirstName</label>
+        <input type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">LastName</label>
+        <input type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Action
+            </button>
+            <ul class="dropdown-menu">
+
+@*                @foreach (var course in Model.CourseViewModel)
+                {
+                    <li><a class="dropdown-item">@course.CourseName</a></li>
+                }*@
+                
+
+            </ul>
+        </div>
+    </div>
+    
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
